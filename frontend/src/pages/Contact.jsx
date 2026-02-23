@@ -32,7 +32,7 @@ const Contact = () => {
                 ? emailjs.send(serviceId, templateId, emailParams, publicKey)
                 : Promise.resolve(null);
 
-            const backendPromise = fetch('http://localhost:5000/api/contact', {
+            const backendPromise = fetch('https://aapthi-marketing-solutions-ftgn.onrender.com/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

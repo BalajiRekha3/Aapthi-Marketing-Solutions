@@ -76,7 +76,7 @@ const Careers = () => {
         formData.append('resume', resume);
 
         try {
-            const response = await fetch('http://localhost:5000/api/careers/upload', {
+            const response = await fetch('https://aapthi-marketing-solutions-ftgn.onrender.com/api/careers/upload', {
                 method: 'POST',
                 body: formData,
             });

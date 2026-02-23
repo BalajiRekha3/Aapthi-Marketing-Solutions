@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from './Logo';
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,16 +42,20 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="flex-shrink-0 flex items-center"
-                    >
-                        <Link to="/" className="flex items-center group py-2">
-                            <Logo className="w-auto h-12 md:h-14 transition-transform group-hover:scale-105 duration-300" />
-                        </Link>
-                    </motion.div>
+                     <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex-shrink-0 flex items-center"
+    >
+      <Link to="/" className="flex items-center group py-2">
+        <img
+          src="bluelogo.jpeg"
+          alt="Aapthi Marketing Solutions"
+          className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105 duration-300"
+        />
+      </Link>
+    </motion.div>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-1 lg:space-x-4">
