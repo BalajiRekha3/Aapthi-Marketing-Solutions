@@ -80,10 +80,10 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="hover:text-white text-sm">IT Staffing Solutions</Link></li>
-              <li><Link to="/services" className="hover:text-white text-sm">Website Development</Link></li>
-              <li><Link to="/services" className="hover:text-white text-sm">XML & Non-Voice Projects</Link></li>
-              <li><Link to="/services" className="hover:text-white text-sm">Enterprise Partnerships</Link></li>
+              <li><Link to="/services#staffing" className="hover:text-white text-sm">IT Staffing Solutions</Link></li>
+              <li><Link to="/services#development" className="hover:text-white text-sm">Website Designing & Development</Link></li>
+              <li><Link to="/services#xml" className="hover:text-white text-sm">XML & Non-Voice Projects</Link></li>
+              <li><Link to="/services#partnerships" className="hover:text-white text-sm">Subscrption/ Partner Projects</Link></li>
             </ul>
           </div>
 
@@ -92,19 +92,40 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4 uppercase text-sm tracking-wider">
               Contact Info
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 text-gray-400 mt-0.5" />
-                <span className="text-sm">
-                  PR2W+2RH, Nai Duniya, Revenue Colony, Indore, MP 452009
-                </span>
+                <MapPin className="h-4 w-4 mr-3 text-orange-500 mt-1 shrink-0" />
+                <div>
+                  <h4 className="text-xs font-bold text-gray-200 uppercase tracking-wider mb-1">Hyderabad Office</h4>
+                  <p className="text-sm leading-relaxed">
+                    3rd Floor, Image Hospitals Ln, Pratap Nagar, Nagarjuna Nagar colony, Yella Reddy Guda, Hyderabad, Telangana 500073
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <MapPin className="h-4 w-4 mr-3 text-gray-400 mt-1 shrink-0" />
+                <div>
+                  <h4 className="text-xs font-bold text-gray-200 uppercase tracking-wider mb-1">Indore Office</h4>
+                  <p className="text-sm leading-relaxed">
+                    PR2W+2RH, Nai Duniya, Revenue Colony, Indira Gandhi Nagar, Indore, Madhya Pradesh 452009
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <MapPin className="h-4 w-4 mr-3 text-gray-400 mt-1 shrink-0" />
+                <div>
+                  <h4 className="text-xs font-bold text-gray-200 uppercase tracking-wider mb-1">Noida Office</h4>
+                  <p className="text-sm leading-relaxed">
+                    Hotel white castle, Dadri Main Rd, Bhangel, Sector 82, Noida, Uttar Pradesh 201304
+                  </p>
+                </div>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-3 text-gray-400" />
-                <span className="text-sm">+91 98765 43210</span>
+                <Phone className="h-4 w-4 mr-3 text-gray-400 shrink-0" />
+                <span className="text-sm">+91 9154399144</span>
               </li>
               <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-3 text-gray-400" />
+                <Mail className="h-4 w-4 mr-3 text-gray-400 shrink-0" />
                 <a
                   href="mailto:hr@aapthisolutions.com"
                   className="text-sm hover:text-white transition-colors"

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AnimatedLogo from '../AnimatedLogo';
 
 
 const Header = () => {
@@ -48,11 +49,10 @@ const Header = () => {
                         transition={{ duration: 0.5 }}
                         className="flex-shrink-0 flex items-center"
                     >
-                        <Link to="/" className="flex items-center gap-3 group py-2">
-                            <img
-                                src="/assets/clients/Logo.png"
-                                alt="Aapthi Marketing Solutions"
-                                className="h-10 md:h-12 w-auto rounded-lg shadow-sm transition-transform group-hover:scale-105 duration-300"
+                        <Link to="/" className="flex items-center gap-1 group py-2">
+                            <AnimatedLogo
+                                key={location.pathname}
+                                className="h-16 md:h-20 w-auto flex-shrink-0 relative -left-0 transition-transform group-hover:scale-105 duration-300"
                             />
                             <div className="flex flex-col leading-tight">
                                 <span className="text-xl md:text-2xl font-black tracking-tight text-navy-950">

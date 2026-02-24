@@ -28,8 +28,16 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Aapthi Marketing Solutions Pvt Ltd | Premium IT & Workforce</title>
-                <meta name="description" content="Empowering Businesses with Smart IT & Workforce Solutions. Premium IT staffing, advanced web development, and XML data processing." />
+                <title>Aapthi Marketing Solutions Pvt Ltd | IT, Construction & Business Services</title>
+                <meta name="description" content="Aapthi Marketing Solutions Pvt Ltd — India's trusted partner for IT Staffing, Web Development, XML Data Processing, Real Estate, and Business Process Services." />
+                <link rel="canonical" href="https://aapthimarketing.com/" />
+                <meta property="og:title" content="Aapthi Marketing Solutions Pvt Ltd" />
+                <meta property="og:description" content="Empowering businesses with enterprise IT staffing, web development, and diversified business solutions." />
+                <meta property="og:url" content="https://aapthimarketing.com/" />
+                <meta property="og:image" content="https://aapthimarketing.com/assets/clients/Logo.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Aapthi Marketing Solutions Pvt Ltd" />
+                <meta name="twitter:description" content="Empowering businesses with enterprise IT staffing, web development, and diversified business solutions." />
             </Helmet>
 
             {/* Hero Section */}

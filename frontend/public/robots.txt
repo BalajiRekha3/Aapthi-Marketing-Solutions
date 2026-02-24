@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin pages from indexing
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /admin/dashboard
+
+Sitemap: https://aapthimarketing.com/sitemap.xml

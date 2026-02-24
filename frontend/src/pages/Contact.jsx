@@ -135,7 +135,7 @@ const Contact = () => {
                                     <Clock className="h-6 w-6 text-orange-400 mr-4 shrink-0" />
                                     <div>
                                         <h3 className="font-semibold text-lg mb-1">Business Hours</h3>
-                                        <p className="text-gray-300">Monday - Saturday <br /> 9:00 AM to 6:00 PM</p>
+                                        <p className="text-gray-300">Monday - Friday <br /> 9:00 AM to 7:00 PM</p>
                                     </div>
                                 </div>
                             </div>

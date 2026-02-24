@@ -1,8 +1,23 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Services = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+    }, [location.hash]);
+
     // We assume images are copied to /assets/services/ in the public directory
     const servicesList = [
         {
@@ -76,11 +91,12 @@ const Services = () => {
                 <div className="space-y-24">
                     {servicesList.map((service, index) => (
                         <motion.div
+                            id={service.id}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-100px" }}
                             key={service.id}
-                            className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                            className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center scroll-mt-32 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
                         >
                             {/* Image Side */}
                             <div className="w-full lg:w-1/2 relative group">
