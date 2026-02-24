@@ -144,7 +144,7 @@ const Contact = () => {
                         {/* Google Maps Embed Placeholder */}
                         <div className="rounded-2xl overflow-hidden shadow-lg h-64 bg-gray-200 border border-gray-100 relative group">
                             <iframe
-                                src="https://maps.google.com/maps?q=Nai%20Duniya,%20Revenue%20Colony,%20Indira%20Gandhi%20Nagar,%20Indore&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.587038947842!2d78.44340567420586!3d17.43159488346311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91b30fe22417%3A0x80724482a1500305!2saapthi%20marketing%20solutions%20private%20limited!5e0!3m2!1sen!2sus!4v1771936068578!5m2!1sen!2sus"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
