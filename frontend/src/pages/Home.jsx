@@ -80,7 +80,7 @@ const Home = () => {
 
                             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                                 <Link
-                                    to="/contact"
+                                    to="/contact#contact-form"
                                     className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-navy-900 bg-white overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)]"
                                 >
                                     <span className="relative z-10 flex items-center">

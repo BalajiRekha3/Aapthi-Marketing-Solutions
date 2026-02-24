@@ -18,12 +18,20 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
               className="mb-4"
             >
-              <Link to="/" className="inline-flex items-center group">
+              <Link to="/" className="inline-flex items-center gap-3 group">
                 <img
-                  src="bluelogo.jpeg"
+                  src="/assets/clients/Logo.png"
                   alt="Aapthi Marketing Solutions"
-                  className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                  className="h-10 w-auto rounded-lg shadow-sm transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="flex flex-col leading-tight text-left">
+                  <span className="text-xl font-black text-white">
+                    Aapthi Marketing
+                  </span>
+                  <span className="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">
+                    Solutions Pvt Ltd
+                  </span>
+                </div>
               </Link>
             </motion.div>
 
@@ -33,7 +41,13 @@ const Footer = () => {
             </p>
 
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/company/aapthimarketing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#0A66C2] transition-colors"
+                title="Follow us on LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -56,7 +70,7 @@ const Footer = () => {
               <li><Link to="/projects" className="hover:text-white text-sm">Projects</Link></li>
               <li><Link to="/awards" className="hover:text-white text-sm">Awards & Recognitions</Link></li>
               <li><Link to="/careers" className="hover:text-white text-sm">Careers</Link></li>
-              <li><Link to="/contact" className="hover:text-white text-sm">Contact Us</Link></li>
+              <li><Link to="/contact#contact-form" className="hover:text-white text-sm">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -91,7 +105,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-gray-400" />
-                <span className="text-sm">hr@aapthisolutions.com</span>
+                <a
+                  href="mailto:hr@aapthisolutions.com"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  hr@aapthisolutions.com
+                </a>
               </li>
             </ul>
           </div>

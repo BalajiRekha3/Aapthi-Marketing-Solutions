@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
+    const location = useLocation();
+    useEffect(() => {
+        if (location.hash === '#contact-form') {
+            const element = document.getElementById('contact-form');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location.hash]);
+
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [status, setStatus] = useState(null); // 'sending', 'success', 'error'
 
@@ -114,7 +125,9 @@ const Contact = () => {
                                     <Mail className="h-6 w-6 text-orange-400 mr-4 shrink-0" />
                                     <div>
                                         <h3 className="font-semibold text-lg mb-1">Official Email</h3>
-                                        <p className="text-gray-300">hr@aapthisolutions.com</p>
+                                        <a href="mailto:hr@aapthisolutions.com" className="text-gray-300 hover:text-white transition-colors">
+                                            hr@aapthisolutions.com
+                                        </a>
                                     </div>
                                 </div>
 
@@ -146,7 +159,7 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-gray-50 rounded-2xl p-8 lg:p-12 shadow-sm border border-gray-100">
+                    <div id="contact-form" className="bg-gray-50 rounded-2xl p-8 lg:p-12 shadow-sm border border-gray-100">
                         <h2 className="text-2xl font-bold text-navy-900 mb-6">Send an Inquiry</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
 

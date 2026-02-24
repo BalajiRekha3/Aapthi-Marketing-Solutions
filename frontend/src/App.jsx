@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages placeholders
 import Home from './pages/Home';
@@ -35,6 +36,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           {/* Public Routes with Header & Footer */}
           <Route element={<PublicLayout />}>

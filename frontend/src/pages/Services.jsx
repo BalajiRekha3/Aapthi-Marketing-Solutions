@@ -122,7 +122,7 @@ const Services = () => {
                                         className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl text-white bg-navy-800 hover:bg-orange-600 hover:shadow-lg active:scale-95 transition-all group"
                                     >
                                         Inquire Now
-                                        <span className="ml-2 transition-transform group-hover:translate-x-1">Ã¢â€ â€™</span>
+                                        <span className="ml-2 transition-transform group-hover:translate-x-1"></span>
                                     </Link>
                                 </div>
                             </motion.div>

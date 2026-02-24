@@ -42,20 +42,28 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
-                     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex-shrink-0 flex items-center"
-    >
-      <Link to="/" className="flex items-center group py-2">
-        <img
-          src="bluelogo.jpeg"
-          alt="Aapthi Marketing Solutions"
-          className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105 duration-300"
-        />
-      </Link>
-    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex-shrink-0 flex items-center"
+                    >
+                        <Link to="/" className="flex items-center gap-3 group py-2">
+                            <img
+                                src="/assets/clients/Logo.png"
+                                alt="Aapthi Marketing Solutions"
+                                className="h-10 md:h-12 w-auto rounded-lg shadow-sm transition-transform group-hover:scale-105 duration-300"
+                            />
+                            <div className="flex flex-col leading-tight">
+                                <span className="text-xl md:text-2xl font-black tracking-tight text-navy-950">
+                                    Aapthi Marketing
+                                </span>
+                                <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-blue-600 uppercase">
+                                    Solutions Pvt Ltd
+                                </span>
+                            </div>
+                        </Link>
+                    </motion.div>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-1 lg:space-x-4">
@@ -94,7 +102,7 @@ const Header = () => {
                         className="hidden md:flex items-center"
                     >
                         <Link
-                            to="/contact"
+                            to="/contact#contact-form"
                             className="relative overflow-hidden group bg-navy-800 text-white px-6 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg transition-all"
                         >
                             <span className="relative z-10 flex items-center gap-2">
@@ -157,7 +165,7 @@ const Header = () => {
                             ))}
                             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
                                 <Link
-                                    to="/contact"
+                                    to="/contact#contact-form"
                                     className="block w-full text-center mt-6 bg-navy-800 text-white px-4 py-4 rounded-xl font-bold shadow-md active:scale-95 transition-transform"
                                 >
                                     Get In Touch
