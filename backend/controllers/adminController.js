@@ -6,10 +6,17 @@ const db = require('../config/db_pg');
 const login = (req, res) => {
     const { username, password } = req.body;
 
-    const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
-    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+    // Trim to avoid invisible whitespace issues
+    const inputUser = (username || '').trim();
+    const inputPass = (password || '').trim();
 
-    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+    const ADMIN_USERNAME = (process.env.ADMIN_USERNAME || 'admin').trim();
+    const ADMIN_PASSWORD = (process.env.ADMIN_PASSWORD || 'admin@aapthi2026').trim();
+
+    // Debug log (visible in Render logs)
+    console.log(`Login attempt → user: "${inputUser}" | env_user: "${ADMIN_USERNAME}" | match: ${inputUser === ADMIN_USERNAME && inputPass === ADMIN_PASSWORD}`);
+
+    if (inputUser === ADMIN_USERNAME && inputPass === ADMIN_PASSWORD) {
         const payload = {
             user: {
                 username: ADMIN_USERNAME
@@ -26,7 +33,10 @@ const login = (req, res) => {
             }
         );
     } else {
-        res.status(400).json({ message: 'Invalid Credentials' });
+        res.status(400).json({
+            message: 'Invalid Credentials',
+            hint: `Expected user: "${ADMIN_USERNAME}" — received: "${inputUser}"`
+        });
     }
 };
 
